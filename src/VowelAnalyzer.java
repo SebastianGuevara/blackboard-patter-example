@@ -5,10 +5,11 @@ public class VowelAnalyzer implements DataAnalyzer
     public void analyze(Blackboard blackboard) {
         String data = blackboard.getData();
         int count = 0;
-        for (char c: data.toLowerCase().toCharArray()){
+       for (char c: data.toLowerCase().toCharArray()){
             if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u')
                 count++;
         }
         System.out.println("El número de vocales es: "+count);
+        blackboard.setData(blackboard.getData() + ", vocales=" + count);
     }
 }

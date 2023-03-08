@@ -5,5 +5,6 @@ public class LengthAnalyzer implements DataAnalyzer
         String data = blackboard.getData();
         int length = data.length();
         System.out.println("La longitud es: "+length);
+        blackboard.setData("longitud=" + length);
     }
 }
